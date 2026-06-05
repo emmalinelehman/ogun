@@ -1,0 +1,11 @@
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 32px;
+  transition: border-color 0.3s var(--ease), transform 0.3s var(--ease);
+}
+
+.card:hover {
+  border-color: #3d3d3d;
+}

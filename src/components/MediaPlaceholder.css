@@ -1,0 +1,89 @@
+.media {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  background-color: #050505;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+}
+
+/* ---- Placeholder treatments (no stock imagery) ---- */
+.media--ph {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.media__tag {
+  position: relative;
+  z-index: 2;
+  margin: 16px;
+  font-family: var(--font-body);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.media__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Engineering grid */
+.media--grid {
+  background-color: #070707;
+}
+.media--grid .media__overlay {
+  background-image:
+    linear-gradient(to right, rgba(42, 42, 42, 0.55) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(42, 42, 42, 0.55) 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: radial-gradient(circle at 50% 45%, #000 30%, transparent 78%);
+  -webkit-mask-image: radial-gradient(circle at 50% 45%, #000 30%, transparent 78%);
+}
+.media--grid::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(
+    ellipse at 50% 40%,
+    rgba(0, 174, 239, 0.12),
+    transparent 60%
+  );
+}
+
+/* Plume / gas / heat */
+.media--plume {
+  background:
+    radial-gradient(ellipse at 30% 120%, rgba(0, 174, 239, 0.28), transparent 55%),
+    radial-gradient(ellipse at 70% 130%, rgba(255, 255, 255, 0.10), transparent 50%),
+    #040608;
+}
+.media--plume .media__overlay {
+  background: repeating-linear-gradient(
+    115deg,
+    transparent 0,
+    transparent 22px,
+    rgba(255, 255, 255, 0.025) 22px,
+    rgba(255, 255, 255, 0.025) 23px
+  );
+}
+
+/* Simulation field */
+.media--sim {
+  background:
+    conic-gradient(from 210deg at 60% 50%, #061018, #0a0a0a, #08121a, #061018);
+}
+.media--sim .media__overlay {
+  background-image: radial-gradient(
+    circle at 60% 50%,
+    rgba(0, 174, 239, 0.35) 0,
+    rgba(0, 174, 239, 0.12) 22%,
+    transparent 55%
+  );
+}

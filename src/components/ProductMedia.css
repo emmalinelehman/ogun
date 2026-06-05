@@ -1,0 +1,32 @@
+.prodmedia {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.prodmedia__item {
+  margin: 0;
+}
+
+.prodmedia__item .media {
+  transition: transform 0.5s var(--ease);
+}
+.prodmedia__item:hover .media {
+  transform: scale(1.015);
+}
+
+.prodmedia__caption {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.prodmedia__item:nth-child(2).is-visible {
+  animation-delay: 0.14s;
+}
+
+@media (max-width: 760px) {
+  .prodmedia {
+    grid-template-columns: 1fr;
+  }
+}

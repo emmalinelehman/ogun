@@ -1,0 +1,59 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  border: none;
+  background: none;
+  transition:
+    background-color 0.3s var(--ease),
+    color 0.3s var(--ease),
+    border-color 0.3s var(--ease),
+    gap 0.3s var(--ease);
+}
+
+/* Primary: white border, transparent bg → inverts on hover */
+.btn--primary {
+  padding: 15px 30px;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-primary);
+  background-color: transparent;
+  border: 1px solid var(--text-primary);
+  border-radius: 2px;
+}
+
+.btn--primary:hover,
+.btn--primary:focus-visible {
+  background-color: var(--text-primary);
+  color: #000;
+}
+
+/* Secondary: text link with arrow + underline */
+.btn--secondary {
+  padding: 4px 0;
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+}
+
+.btn--secondary:hover .btn__arrow,
+.btn--secondary:focus-visible .btn__arrow {
+  transform: translateX(4px);
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus-visible {
+  border-bottom-color: var(--text-primary);
+}
+
+.btn__arrow {
+  display: inline-block;
+  transition: transform 0.3s var(--ease);
+}

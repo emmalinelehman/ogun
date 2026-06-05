@@ -1,0 +1,26 @@
+.section-heading {
+  max-width: 64ch;
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+
+.section-heading__kicker {
+  margin-bottom: 18px;
+}
+
+.section-heading__title {
+  font-size: clamp(2rem, 4.4vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.section-heading__lead {
+  margin-top: 22px;
+}
+
+.section-heading__lead p {
+  font-size: clamp(1.02rem, 1.6vw, 1.18rem);
+  color: var(--text-secondary);
+  font-weight: 300;
+}

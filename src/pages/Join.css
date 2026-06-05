@@ -1,0 +1,32 @@
+.join__hero {
+  padding-top: calc(var(--header-h) + clamp(48px, 8vw, 110px));
+  padding-bottom: clamp(32px, 4vw, 56px);
+}
+
+.join__hero-inner {
+  max-width: 70ch;
+}
+
+.join__title {
+  font-size: clamp(2.4rem, 6vw, 4.4rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.02;
+}
+
+.join__intro {
+  margin-top: 24px;
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  font-weight: 300;
+  color: var(--text-secondary);
+  max-width: 60ch;
+}
+
+.join__section-title {
+  font-size: clamp(0.9rem, 1.4vw, 1rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
