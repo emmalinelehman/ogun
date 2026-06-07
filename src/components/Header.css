@@ -122,16 +122,24 @@
   transform: translateY(-6px) rotate(-45deg);
 }
 
-/* Mobile menu panel */
+/* Mobile menu panel — sibling of <header>, full-viewport below the bar */
 .header__mobile {
   position: fixed;
   inset: var(--header-h) 0 0 0;
+  z-index: 99; /* below the header bar (100), above page content */
   background-color: #000;
   padding: 32px 24px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   transform: translateY(-8px);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+}
+
+/* hidden attribute wins over the open transition */
+.header__mobile[hidden] {
+  display: none;
 }
 
 .header__mobile.is-open {
