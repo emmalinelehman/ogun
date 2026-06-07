@@ -1,6 +1,6 @@
 # Ogun USA — Website
 
-A dark, technical, cinematic marketing site for **Ogun USA**, a defense
+A dark, technical, cinematic marketing site for **Ogun USA**, a
 technology startup focused on High Velocity Engineering: computational design,
 AI-assisted optimization, and additive manufacturing.
 
